@@ -14,6 +14,15 @@ public class CheckIsoscele {
         return perimeter;
     }
 
+    public boolean isIsosceles(double[][] coord) {
+        side1 = calculateSide(new double[][]{coord[0], coord[1]});
+        side2 = calculateSide(new double[][]{coord[1], coord[2]});
+        side3 = calculateSide(new double[][]{coord[0], coord[2]});
+
+        boolean isIsoscele = side1 == side2 || side2 == side3 || side3 == side1;
+        return isIsoscele;
+    }
+
     public double calculateSide(double[][] coordinates) {
         double sideLength = 0.0;
         double xCoordDistance = 0;
