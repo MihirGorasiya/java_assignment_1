@@ -5,7 +5,14 @@ public class CheckIsoscele {
     double side2 = 0.0;
     double side3 = 0.0;
 
+    public double calculatePerimeter(double[][] coord) {
+        side1 = calculateSide(new double[][]{coord[0], coord[1]});
+        side2 = calculateSide(new double[][]{coord[1], coord[2]});
+        side3 = calculateSide(new double[][]{coord[0], coord[2]});
 
+        double perimeter = side1 + side2 + side3;
+        return perimeter;
+    }
 
     public double calculateSide(double[][] coordinates) {
         double sideLength = 0.0;
