@@ -8,6 +8,9 @@ public class Main {
 
         Main main = new Main();
         coordinates = main.setCoordinates(scanner);
+
+        CheckIsoscele checkIsoscele = new CheckIsoscele();
+        System.out.print("\nPerimeter: " + checkIsoscele.calculatePerimeter(coordinates));
     }
 
     public double[][] setCoordinates(Scanner scan) {
