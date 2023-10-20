@@ -11,6 +11,15 @@ public class Main {
 
         CheckIsoscele checkIsoscele = new CheckIsoscele();
         System.out.print("\nPerimeter: " + checkIsoscele.calculatePerimeter(coordinates));
+
+        String isosceles;
+
+        if (checkIsoscele.isIsosceles(coordinates))
+            isosceles = "isosceles.";
+        else
+            isosceles = "Not isosceles.";
+
+        System.out.println(". The triangle is " + isosceles);
     }
 
     public double[][] setCoordinates(Scanner scan) {
