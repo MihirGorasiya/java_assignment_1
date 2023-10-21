@@ -17,6 +17,22 @@ public class Main {
                 : "Not isosceles.";
 
         System.out.println(". The triangle is " + isosceles);
+
+
+        double[] pointToCheck = new double[2];
+        System.out.println("\nEnter Point to check if the point is inside triangle or outside triangle.");
+        System.out.print("Please enter x: ");
+        pointToCheck[0] = scanner.nextDouble();
+        System.out.print("Please enter y: ");
+        pointToCheck[1] = scanner.nextDouble();
+
+        PointLocationCheck pointLocationCheck = new PointLocationCheck();
+        boolean isPointInside = pointLocationCheck.isPointInsideTriangle(new double[][]{coordinates[0], coordinates[1], coordinates[2], pointToCheck});
+
+
+        System.out.println(isPointInside ? "The point is inside the triangle." : "The point is not inside the triangle.");
+
+
     }
 
     public double[][] setCoordinates(Scanner scan) {
